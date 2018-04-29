@@ -31,7 +31,9 @@ fn ask_site() -> std::io::Result<String> {
 
     let mut site = String::new();
     match ::std::io::stdin().read_line(&mut site) {
-        Ok(_) => Ok(site.chars().take_while(|x| x != &'\n').collect()),
+        Ok(_) => Ok(site.chars()
+            .take_while(|x| x != &'\n' && x != &'\r')
+            .collect()),
         Err(err) => Err(err),
     }
 }
