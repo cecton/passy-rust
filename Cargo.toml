@@ -1,0 +1,9 @@
+[package]
+name = "passy"
+version = "0.1.0"
+authors = ["Cecile Tonglet <cecile.tonglet@gmail.com>"]
+
+[dependencies]
+rpassword = "2.0.0"
+sha1 = { version = "0.6.0", features = ["std"] }
+base64 = "~0.6.0"
