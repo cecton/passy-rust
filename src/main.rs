@@ -9,7 +9,7 @@ fn main() {
 	let cmd = &args[0];
 
 	let pass = rpassword::prompt_password_stderr("Password: ").unwrap();
-	println!();
+	eprintln!();
 
 	eprintln!("Hint: {}", make_password(&pass, "foo").get(0..6).unwrap());
 
